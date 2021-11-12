@@ -1,0 +1,12 @@
+2021-11-11 23:16:40,770 test33 INFO test_6_aduit_api.py [第29行] ===== 发起一次http请求 =====
+2021-11-11 23:16:40,770 test33 INFO test_6_aduit_api.py [第30行] 从excel中读取的测试数据为：{'id': 9, 'title': '用例3-普通用户-登陆', 'method': 'post', 'url': 'member/login', 'request_data': '{"mobile_phone":"#general_user#","pwd":"#general_pwd#"}', 'extract': '{"member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2021-11-11 23:16:40,771 test33 INFO handle_replace.py [第24行] 正则提取的数据为：['general_user', 'general_pwd']
+2021-11-11 23:16:40,771 test33 INFO handle_replace.py [第35行] 从data.yaml中进行替换的数据为：general_user，替换后的数据为：15088314689
+2021-11-11 23:16:40,772 test33 INFO handle_replace.py [第35行] 从data.yaml中进行替换的数据为：general_pwd，替换后的数据为：123456789
+2021-11-11 23:16:40,772 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 9, 'title': '用例3-普通用户-登陆', 'method': 'post', 'url': 'member/login', 'request_data': '{"mobile_phone":"15088314689","pwd":"123456789"}', 'extract': '{"member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2021-11-11 23:16:40,772 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:40,772 test33 INFO handle_requests.py [第46行] 请求的method为：post
+2021-11-11 23:16:40,772 test33 INFO handle_requests.py [第47行] 请求的url为：member/login
+2021-11-11 23:16:40,772 test33 INFO handle_requests.py [第35行] 请求数据为: {'mobile_phone': '15088314689', 'pwd': '123456789'}
+2021-11-11 23:16:40,840 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:40,840 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 0, 'msg': 'OK', 'data': {'id': 4, 'leave_amount': 3514000.2, 'mobile_phone': '15088314689', 'reg_name': '测试开发小可爱', 'reg_time': '2021-11-01 20:00:02.0', 'type': 1, 'token_info': {'token_type': 'Bearer', 'expires_in': '2021-11-11 23:21:40', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjQsImV4cCI6MTYzNjY0NDEwMH0.NocyLUIFLkcO67jPTDzZUjIHbHpaZMyNQNjSRxJtgZwcOfL9r7Q39x1RkoBMAIVDahtu6JG7piShT8m7LTYRbg'}}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}

@@ -1,0 +1,12 @@
+2021-11-11 23:16:39,997 test33 INFO test_6_aduit_api.py [第29行] ===== 发起一次http请求 =====
+2021-11-11 23:16:39,997 test33 INFO test_6_aduit_api.py [第30行] 从excel中读取的测试数据为：{'id': 7, 'title': '用例1-管理员-登陆', 'method': 'post', 'url': 'member/login', 'request_data': '{"mobile_phone":"#admin_user#","pwd":"#admin_pwd#"}', 'extract': '{"member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2021-11-11 23:16:39,998 test33 INFO handle_replace.py [第24行] 正则提取的数据为：['admin_user', 'admin_pwd']
+2021-11-11 23:16:39,998 test33 INFO handle_replace.py [第35行] 从data.yaml中进行替换的数据为：admin_user，替换后的数据为：15500000000
+2021-11-11 23:16:39,998 test33 INFO handle_replace.py [第35行] 从data.yaml中进行替换的数据为：admin_pwd，替换后的数据为：12345678
+2021-11-11 23:16:39,998 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 7, 'title': '用例1-管理员-登陆', 'method': 'post', 'url': 'member/login', 'request_data': '{"mobile_phone":"15500000000","pwd":"12345678"}', 'extract': '{"member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2021-11-11 23:16:39,998 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:39,998 test33 INFO handle_requests.py [第46行] 请求的method为：post
+2021-11-11 23:16:39,998 test33 INFO handle_requests.py [第47行] 请求的url为：member/login
+2021-11-11 23:16:39,999 test33 INFO handle_requests.py [第35行] 请求数据为: {'mobile_phone': '15500000000', 'pwd': '12345678'}
+2021-11-11 23:16:40,064 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:40,065 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 0, 'msg': 'OK', 'data': {'id': 3, 'leave_amount': 64000.55, 'mobile_phone': '15500000000', 'reg_name': '小傻瓜', 'reg_time': '2021-11-01 19:59:14.0', 'type': 1, 'token_info': {'token_type': 'Bearer', 'expires_in': '2021-11-11 23:21:39', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjMsImV4cCI6MTYzNjY0NDA5OX0.LWwVu-TUnu-32mCIJFBoGS5obatrLVu4UL1-zTYv3wXM-tBVxH0MFFgWU-FZfR9L1X-tIwhsTTS4NXiFYlAVrA'}}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}

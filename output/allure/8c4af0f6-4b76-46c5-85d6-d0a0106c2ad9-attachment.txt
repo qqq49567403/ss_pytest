@@ -1,0 +1,20 @@
+2021-11-11 23:16:33,273 test33 INFO test_4_updatename_api.py [第30行] ===== 发起一次http请求 =====
+2021-11-11 23:16:33,273 test33 INFO test_4_updatename_api.py [第31行] 从excel中读取的测试数据为：{'id': 6, 'title': '更新昵称为空', 'method': 'patch', 'url': 'member/update', 'request_data': '{"member_id":"#member_id#","reg_name":""}', 'extract': None, 'expected': '{"code": 1, "msg": "用户名不能为空字符串，也不能全部是空格"}', 'check_sql': None}
+2021-11-11 23:16:33,275 test33 INFO handle_replace.py [第24行] 正则提取的数据为：['member_id']
+2021-11-11 23:16:33,275 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#member_id#，替换后的数据为：4
+2021-11-11 23:16:33,275 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 6, 'title': '更新昵称为空', 'method': 'patch', 'url': 'member/update', 'request_data': '{"member_id":"4","reg_name":""}', 'extract': None, 'expected': '{"code": 1, "msg": "用户名不能为空字符串，也不能全部是空格"}', 'check_sql': None}
+2021-11-11 23:16:33,275 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:33,275 test33 INFO handle_requests.py [第46行] 请求的method为：patch
+2021-11-11 23:16:33,275 test33 INFO handle_requests.py [第47行] 请求的url为：member/update
+2021-11-11 23:16:33,275 test33 INFO handle_requests.py [第35行] 请求数据为: {'member_id': '4', 'reg_name': ''}
+2021-11-11 23:16:33,340 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:33,340 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 1, 'msg': '用户名不能为空字符串，也不能全部是空格', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-11-11 23:16:33,340 test33 INFO handle_assert.py [第129行] 提取表达式为：code，期望结果为：1
+2021-11-11 23:16:33,340 test33 INFO handle_assert.py [第132行] 提取之后的结果为：[1]
+2021-11-11 23:16:33,340 test33 INFO handle_assert.py [第141行] 提取的值与期望的值比对结果为：True
+2021-11-11 23:16:33,340 test33 INFO handle_assert.py [第129行] 提取表达式为：msg，期望结果为：用户名不能为空字符串，也不能全部是空格
+2021-11-11 23:16:33,341 test33 INFO handle_assert.py [第132行] 提取之后的结果为：['用户名不能为空字符串，也不能全部是空格']
+2021-11-11 23:16:33,341 test33 INFO handle_assert.py [第141行] 提取的值与期望的值比对结果为：True
+2021-11-11 23:16:33,341 test33 INFO handle_assert.py [第144行] 所有实际结果与期望结果的比对情况：
+2021-11-11 23:16:33,341 test33 INFO handle_assert.py [第146行] jsonpath-code-actual-1-expected-1:True
+2021-11-11 23:16:33,341 test33 INFO handle_assert.py [第146行] jsonpath-msg-actual-用户名不能为空字符串，也不能全部是空格-expected-用户名不能为空字符串，也不能全部是空格:True

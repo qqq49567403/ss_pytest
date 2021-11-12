@@ -1,0 +1,12 @@
+2021-11-11 23:16:43,815 test33 INFO test_7_invest_api.py [第30行] ===== 发起一次http请求 =====
+2021-11-11 23:16:43,816 test33 INFO test_7_invest_api.py [第31行] 从excel中读取的测试数据为：{'id': 5, 'title': '用例1-借款人-登录', 'method': 'post', 'url': 'member/login', 'pre_sql': None, 'request_data': '{"mobile_phone":"#borrower_user#","pwd":"#borrower_pwd#"}', 'extract': '{"member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2021-11-11 23:16:43,817 test33 INFO handle_replace.py [第24行] 正则提取的数据为：['borrower_user', 'borrower_pwd']
+2021-11-11 23:16:43,817 test33 INFO handle_replace.py [第35行] 从data.yaml中进行替换的数据为：borrower_user，替换后的数据为：13574660252
+2021-11-11 23:16:43,817 test33 INFO handle_replace.py [第35行] 从data.yaml中进行替换的数据为：borrower_pwd，替换后的数据为：12345678
+2021-11-11 23:16:43,817 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 5, 'title': '用例1-借款人-登录', 'method': 'post', 'url': 'member/login', 'pre_sql': None, 'request_data': '{"mobile_phone":"13574660252","pwd":"12345678"}', 'extract': '{"member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2021-11-11 23:16:43,817 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:43,817 test33 INFO handle_requests.py [第46行] 请求的method为：post
+2021-11-11 23:16:43,817 test33 INFO handle_requests.py [第47行] 请求的url为：member/login
+2021-11-11 23:16:43,817 test33 INFO handle_requests.py [第35行] 请求数据为: {'mobile_phone': '13574660252', 'pwd': '12345678'}
+2021-11-11 23:16:43,901 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:43,901 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 0, 'msg': 'OK', 'data': {'id': 5, 'leave_amount': 34000.0, 'mobile_phone': '13574660252', 'reg_name': '小傻瓜', 'reg_time': '2021-11-01 20:00:02.0', 'type': 1, 'token_info': {'token_type': 'Bearer', 'expires_in': '2021-11-11 23:21:43', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjUsImV4cCI6MTYzNjY0NDEwM30.WutoHyKLpFSlsCKud09rPoCZVk_lN6JUFV9_iHXsZwbBt3jD7NLQMFleedTsaLJdaryEwYabPGe588PYBXnNbg'}}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}

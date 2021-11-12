@@ -1,0 +1,39 @@
+2021-11-11 23:16:46,194 test33 INFO test_7_invest_api.py [第30行] ===== 发起一次http请求 =====
+2021-11-11 23:16:46,195 test33 INFO test_7_invest_api.py [第31行] 从excel中读取的测试数据为：{'id': 13, 'title': '用例3-投资人-投资2000', 'method': 'post', 'url': 'member/invest', 'pre_sql': None, 'request_data': '{"member_id":"#member_id#","loan_id":#loan_id#,"amount":2000.0}', 'extract': None, 'expected': '{"$..code":0,"$..msg":"OK"}', 'check_sql': '[{"check_type":"value","check_sql":"select leave_amount from member where id=#member_id#","expected":{"leave_amount":float(#money#)-2000}},{"check_type":"value","check_sql":"select amount from loan where id=#loan_id#","expected":{"amount":float(#loan_amount#)-2000}}]'}
+2021-11-11 23:16:46,196 test33 INFO handle_replace.py [第24行] 正则提取的数据为：['member_id', 'loan_id', 'member_id', 'money', 'loan_id', 'loan_amount']
+2021-11-11 23:16:46,196 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#member_id#，替换后的数据为：4
+2021-11-11 23:16:46,196 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#loan_id#，替换后的数据为：19222
+2021-11-11 23:16:46,196 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#member_id#，替换后的数据为：4
+2021-11-11 23:16:46,196 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#money#，替换后的数据为：3516000.2
+2021-11-11 23:16:46,196 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#loan_id#，替换后的数据为：19222
+2021-11-11 23:16:46,196 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#loan_amount#，替换后的数据为：2000000.0
+2021-11-11 23:16:46,196 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 13, 'title': '用例3-投资人-投资2000', 'method': 'post', 'url': 'member/invest', 'pre_sql': None, 'request_data': '{"member_id":"4","loan_id":19222,"amount":2000.0}', 'extract': None, 'expected': '{"$..code":0,"$..msg":"OK"}', 'check_sql': '[{"check_type":"value","check_sql":"select leave_amount from member where id=4","expected":{"leave_amount":float(3516000.2)-2000}},{"check_type":"value","check_sql":"select amount from loan where id=19222","expected":{"amount":float(2000000.0)-2000}}]'}
+2021-11-11 23:16:46,197 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:46,197 test33 INFO handle_requests.py [第46行] 请求的method为：post
+2021-11-11 23:16:46,197 test33 INFO handle_requests.py [第47行] 请求的url为：member/invest
+2021-11-11 23:16:46,197 test33 INFO handle_requests.py [第35行] 请求数据为: {'member_id': '4', 'loan_id': 19222, 'amount': 2000.0}
+2021-11-11 23:16:46,268 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:46,268 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 2, 'msg': '该项目不在竞标中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-11-11 23:16:46,268 test33 INFO handle_assert.py [第129行] 提取表达式为：$..code，期望结果为：0
+2021-11-11 23:16:46,268 test33 INFO handle_assert.py [第132行] 提取之后的结果为：[2]
+2021-11-11 23:16:46,268 test33 INFO handle_assert.py [第141行] 提取的值与期望的值比对结果为：False
+2021-11-11 23:16:46,268 test33 INFO handle_assert.py [第129行] 提取表达式为：$..msg，期望结果为：OK
+2021-11-11 23:16:46,269 test33 INFO handle_assert.py [第132行] 提取之后的结果为：['该项目不在竞标中状态']
+2021-11-11 23:16:46,269 test33 INFO handle_assert.py [第141行] 提取的值与期望的值比对结果为：False
+2021-11-11 23:16:46,269 test33 INFO handle_assert.py [第144行] 所有实际结果与期望结果的比对情况：
+2021-11-11 23:16:46,269 test33 INFO handle_assert.py [第146行] jsonpath-$..code-actual-0-expected-2:False
+2021-11-11 23:16:46,269 test33 INFO handle_assert.py [第146行] jsonpath-$..msg-actual-OK-expected-该项目不在竞标中状态:False
+2021-11-11 23:16:46,651 test33 INFO handle_assert.py [第82行] 数据库开始校验！
+2021-11-11 23:16:46,651 test33 INFO handle_assert.py [第86行] 比较sql语句查询之后的值，sql查询结果为字典，将字典中的每一个都进行比较
+2021-11-11 23:16:46,717 test33 INFO handle_assert.py [第88行] 执行sql语句：select leave_amount from member where id=4
+2021-11-11 23:16:46,717 test33 INFO handle_assert.py [第89行] 查询结果为：{'leave_amount': Decimal('3516000.20')}
+2021-11-11 23:16:46,717 test33 INFO handle_assert.py [第90行] 期望结果为：{'leave_amount': 3514000.2}
+2021-11-11 23:16:46,718 test33 INFO handle_assert.py [第97行] 将Decimal类型转换成float，转换后的值为：3516000.2
+2021-11-11 23:16:46,718 test33 INFO handle_assert.py [第103行] 比对失败！
+2021-11-11 23:16:46,718 test33 INFO handle_assert.py [第82行] 数据库开始校验！
+2021-11-11 23:16:46,718 test33 INFO handle_assert.py [第86行] 比较sql语句查询之后的值，sql查询结果为字典，将字典中的每一个都进行比较
+2021-11-11 23:16:46,794 test33 INFO handle_assert.py [第88行] 执行sql语句：select amount from loan where id=19222
+2021-11-11 23:16:46,794 test33 INFO handle_assert.py [第89行] 查询结果为：{'amount': Decimal('2000000.00')}
+2021-11-11 23:16:46,794 test33 INFO handle_assert.py [第90行] 期望结果为：{'amount': 1998000.0}
+2021-11-11 23:16:46,794 test33 INFO handle_assert.py [第97行] 将Decimal类型转换成float，转换后的值为：2000000.0
+2021-11-11 23:16:46,794 test33 INFO handle_assert.py [第103行] 比对失败！

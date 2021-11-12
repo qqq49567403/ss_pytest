@@ -1,0 +1,12 @@
+2021-11-11 23:16:22,558 test33 INFO test_0_setup.py [第27行] ===== 发起一次http请求 =====
+2021-11-11 23:16:22,558 test33 INFO test_0_setup.py [第28行] 从excel中读取的测试数据为：{'id': 3, 'title': '注册借款人', 'method': 'post', 'url': 'member/register', 'request_data': '{"mobile_phone":"#borrower_user#","pwd":"#borrower_pwd#","type":1}', 'expected': None, 'check_sql': None}
+2021-11-11 23:16:22,560 test33 INFO handle_replace.py [第24行] 正则提取的数据为：['borrower_user', 'borrower_pwd']
+2021-11-11 23:16:22,560 test33 INFO handle_replace.py [第35行] 从data.yaml中进行替换的数据为：borrower_user，替换后的数据为：13574660252
+2021-11-11 23:16:22,560 test33 INFO handle_replace.py [第35行] 从data.yaml中进行替换的数据为：borrower_pwd，替换后的数据为：12345678
+2021-11-11 23:16:22,560 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 3, 'title': '注册借款人', 'method': 'post', 'url': 'member/register', 'request_data': '{"mobile_phone":"13574660252","pwd":"12345678","type":1}', 'expected': None, 'check_sql': None}
+2021-11-11 23:16:22,560 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:22,560 test33 INFO handle_requests.py [第46行] 请求的method为：post
+2021-11-11 23:16:22,560 test33 INFO handle_requests.py [第47行] 请求的url为：member/register
+2021-11-11 23:16:22,560 test33 INFO handle_requests.py [第35行] 请求数据为: {'mobile_phone': '13574660252', 'pwd': '12345678', 'type': 1}
+2021-11-11 23:16:22,635 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:22,635 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}

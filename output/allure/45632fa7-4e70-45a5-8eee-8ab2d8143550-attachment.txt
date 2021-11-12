@@ -1,0 +1,11 @@
+2021-11-11 23:16:44,984 test33 INFO test_7_invest_api.py [第30行] ===== 发起一次http请求 =====
+2021-11-11 23:16:44,985 test33 INFO test_7_invest_api.py [第31行] 从excel中读取的测试数据为：{'id': 9, 'title': '用例2-管理人员-充值', 'method': 'post', 'url': 'member/recharge', 'pre_sql': None, 'request_data': '{"member_id":"#member_id#","amount":2000}', 'extract': None, 'expected': None, 'check_sql': None}
+2021-11-11 23:16:44,986 test33 INFO handle_replace.py [第24行] 正则提取的数据为：['member_id']
+2021-11-11 23:16:44,986 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#member_id#，替换后的数据为：3
+2021-11-11 23:16:44,986 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 9, 'title': '用例2-管理人员-充值', 'method': 'post', 'url': 'member/recharge', 'pre_sql': None, 'request_data': '{"member_id":"3","amount":2000}', 'extract': None, 'expected': None, 'check_sql': None}
+2021-11-11 23:16:44,986 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:44,986 test33 INFO handle_requests.py [第46行] 请求的method为：post
+2021-11-11 23:16:44,986 test33 INFO handle_requests.py [第47行] 请求的url为：member/recharge
+2021-11-11 23:16:44,986 test33 INFO handle_requests.py [第35行] 请求数据为: {'member_id': '3', 'amount': 2000}
+2021-11-11 23:16:45,059 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:45,059 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 0, 'msg': 'OK', 'data': {'id': 3, 'leave_amount': 66000.55, 'mobile_phone': '15500000000', 'reg_name': '小傻瓜', 'reg_time': '2021-11-01 19:59:14.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}

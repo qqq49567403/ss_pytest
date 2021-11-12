@@ -1,0 +1,26 @@
+2021-11-11 23:16:42,135 test33 INFO test_6_aduit_api.py [第29行] ===== 发起一次http请求 =====
+2021-11-11 23:16:42,135 test33 INFO test_6_aduit_api.py [第30行] 从excel中读取的测试数据为：{'id': 13, 'title': '用例4-普通用户-审核不通过', 'method': 'patch', 'url': 'loan/audit', 'request_data': '{"loan_id":#loan_id#,"approved_or_not":false}', 'extract': None, 'expected': '{"code": 2,"msg": "普通会员不能审核项目，请使用管理员账号"}', 'check_sql': '{"check_type":"count","check_sql":"select * from loan where id=#loan_id# and `status`=1","expected":{"count":1}}'}
+2021-11-11 23:16:42,136 test33 INFO handle_replace.py [第24行] 正则提取的数据为：['loan_id', 'loan_id']
+2021-11-11 23:16:42,136 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#loan_id#，替换后的数据为：19221
+2021-11-11 23:16:42,136 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#loan_id#，替换后的数据为：19221
+2021-11-11 23:16:42,136 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 13, 'title': '用例4-普通用户-审核不通过', 'method': 'patch', 'url': 'loan/audit', 'request_data': '{"loan_id":19221,"approved_or_not":false}', 'extract': None, 'expected': '{"code": 2,"msg": "普通会员不能审核项目，请使用管理员账号"}', 'check_sql': '{"check_type":"count","check_sql":"select * from loan where id=19221 and `status`=1","expected":{"count":1}}'}
+2021-11-11 23:16:42,136 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:42,137 test33 INFO handle_requests.py [第46行] 请求的method为：patch
+2021-11-11 23:16:42,137 test33 INFO handle_requests.py [第47行] 请求的url为：loan/audit
+2021-11-11 23:16:42,137 test33 INFO handle_requests.py [第35行] 请求数据为: {'loan_id': 19221, 'approved_or_not': False}
+2021-11-11 23:16:42,208 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:42,208 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 2, 'msg': '普通会员不能审核项目，请使用管理员账号', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-11-11 23:16:42,209 test33 INFO handle_assert.py [第129行] 提取表达式为：code，期望结果为：2
+2021-11-11 23:16:42,209 test33 INFO handle_assert.py [第132行] 提取之后的结果为：[2]
+2021-11-11 23:16:42,209 test33 INFO handle_assert.py [第141行] 提取的值与期望的值比对结果为：True
+2021-11-11 23:16:42,209 test33 INFO handle_assert.py [第129行] 提取表达式为：msg，期望结果为：普通会员不能审核项目，请使用管理员账号
+2021-11-11 23:16:42,209 test33 INFO handle_assert.py [第132行] 提取之后的结果为：['普通会员不能审核项目，请使用管理员账号']
+2021-11-11 23:16:42,209 test33 INFO handle_assert.py [第141行] 提取的值与期望的值比对结果为：True
+2021-11-11 23:16:42,209 test33 INFO handle_assert.py [第144行] 所有实际结果与期望结果的比对情况：
+2021-11-11 23:16:42,209 test33 INFO handle_assert.py [第146行] jsonpath-code-actual-2-expected-2:True
+2021-11-11 23:16:42,209 test33 INFO handle_assert.py [第146行] jsonpath-msg-actual-普通会员不能审核项目，请使用管理员账号-expected-普通会员不能审核项目，请使用管理员账号:True
+2021-11-11 23:16:42,552 test33 INFO handle_assert.py [第82行] 数据库开始校验！
+2021-11-11 23:16:42,552 test33 INFO handle_assert.py [第110行] 比较sql语句查询之后的条数，sql查询结果为整数，只要比对数据即可
+2021-11-11 23:16:42,618 test33 INFO handle_assert.py [第112行] 执行sql语句：select * from loan where id=19221 and `status`=1
+2021-11-11 23:16:42,619 test33 INFO handle_assert.py [第113行] 查询结果为：1
+2021-11-11 23:16:42,619 test33 INFO handle_assert.py [第114行] 期望结果为：{'count': 1}

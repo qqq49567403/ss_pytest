@@ -1,0 +1,11 @@
+2021-11-11 23:16:43,509 test33 INFO test_7_invest_api.py [第30行] ===== 发起一次http请求 =====
+2021-11-11 23:16:43,509 test33 INFO test_7_invest_api.py [第31行] 从excel中读取的测试数据为：{'id': 4, 'title': '用例1-管理人员-审核通过', 'method': 'patch', 'url': 'loan/audit', 'pre_sql': None, 'request_data': '{"loan_id":#loan_id#,"approved_or_not":true}', 'extract': None, 'expected': None, 'check_sql': None}
+2021-11-11 23:16:43,511 test33 INFO handle_replace.py [第24行] 正则提取的数据为：['loan_id']
+2021-11-11 23:16:43,511 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#loan_id#，替换后的数据为：19222
+2021-11-11 23:16:43,511 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 4, 'title': '用例1-管理人员-审核通过', 'method': 'patch', 'url': 'loan/audit', 'pre_sql': None, 'request_data': '{"loan_id":19222,"approved_or_not":true}', 'extract': None, 'expected': None, 'check_sql': None}
+2021-11-11 23:16:43,511 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:43,511 test33 INFO handle_requests.py [第46行] 请求的method为：patch
+2021-11-11 23:16:43,511 test33 INFO handle_requests.py [第47行] 请求的url为：loan/audit
+2021-11-11 23:16:43,511 test33 INFO handle_requests.py [第35行] 请求数据为: {'loan_id': 19222, 'approved_or_not': True}
+2021-11-11 23:16:43,598 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:43,598 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 2, 'msg': '普通会员不能审核项目，请使用管理员账号', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}

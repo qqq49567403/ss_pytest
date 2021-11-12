@@ -1,0 +1,19 @@
+2021-11-11 23:16:26,687 test33 INFO test_1_register_api.py [第29行] ===== 发起一次http请求 =====
+2021-11-11 23:16:26,687 test33 INFO test_1_register_api.py [第30行] 从excel中读取的测试数据为：{'id': 12, 'title': '类型输入非0，1内容', 'method': 'post', 'url': 'member/register', 'request_data': '{"mobile_phone":"13300003456","pwd":"12345678","type":2}', 'expected': '{"code":2,"msg":"不支持的用户类型"}', 'check_sql': None}
+2021-11-11 23:16:26,688 test33 INFO handle_replace.py [第24行] 正则提取的数据为：[]
+2021-11-11 23:16:26,688 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 12, 'title': '类型输入非0，1内容', 'method': 'post', 'url': 'member/register', 'request_data': '{"mobile_phone":"13300003456","pwd":"12345678","type":2}', 'expected': '{"code":2,"msg":"不支持的用户类型"}', 'check_sql': None}
+2021-11-11 23:16:26,688 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:26,688 test33 INFO handle_requests.py [第46行] 请求的method为：post
+2021-11-11 23:16:26,688 test33 INFO handle_requests.py [第47行] 请求的url为：member/register
+2021-11-11 23:16:26,688 test33 INFO handle_requests.py [第35行] 请求数据为: {'mobile_phone': '13300003456', 'pwd': '12345678', 'type': 2}
+2021-11-11 23:16:26,759 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:26,759 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 2, 'msg': '不支持的用户类型', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-11-11 23:16:26,759 test33 INFO handle_assert.py [第129行] 提取表达式为：code，期望结果为：2
+2021-11-11 23:16:26,759 test33 INFO handle_assert.py [第132行] 提取之后的结果为：[2]
+2021-11-11 23:16:26,759 test33 INFO handle_assert.py [第141行] 提取的值与期望的值比对结果为：True
+2021-11-11 23:16:26,759 test33 INFO handle_assert.py [第129行] 提取表达式为：msg，期望结果为：不支持的用户类型
+2021-11-11 23:16:26,760 test33 INFO handle_assert.py [第132行] 提取之后的结果为：['不支持的用户类型']
+2021-11-11 23:16:26,760 test33 INFO handle_assert.py [第141行] 提取的值与期望的值比对结果为：True
+2021-11-11 23:16:26,760 test33 INFO handle_assert.py [第144行] 所有实际结果与期望结果的比对情况：
+2021-11-11 23:16:26,760 test33 INFO handle_assert.py [第146行] jsonpath-code-actual-2-expected-2:True
+2021-11-11 23:16:26,760 test33 INFO handle_assert.py [第146行] jsonpath-msg-actual-不支持的用户类型-expected-不支持的用户类型:True

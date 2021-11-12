@@ -1,0 +1,24 @@
+2021-11-11 23:16:37,671 test33 INFO test_5_add_bid_api.py [第29行] ===== 发起一次http请求 =====
+2021-11-11 23:16:37,671 test33 INFO test_5_add_bid_api.py [第30行] 从excel中读取的测试数据为：{'id': 15, 'title': '加标-竞标天数0天', 'method': 'post', 'url': 'loan/add', 'request_data': '{"member_id":"#member_id#","title":"py33学习","amount":2000000,"loan_rate":10.0,"loan_term":6,"loan_date_type":1,"bidding_days":0}', 'extract': None, 'expected': '{"code": 2, "msg": "竞标期限为1-10天","data":False}', 'check_sql': None, None: None}
+2021-11-11 23:16:37,672 test33 INFO handle_replace.py [第24行] 正则提取的数据为：['member_id']
+2021-11-11 23:16:37,672 test33 INFO handle_replace.py [第38行] 从Data类中进行替换的数据为：#member_id#，替换后的数据为：4
+2021-11-11 23:16:37,672 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 15, 'title': '加标-竞标天数0天', 'method': 'post', 'url': 'loan/add', 'request_data': '{"member_id":"4","title":"py33学习","amount":2000000,"loan_rate":10.0,"loan_term":6,"loan_date_type":1,"bidding_days":0}', 'extract': None, 'expected': '{"code": 2, "msg": "竞标期限为1-10天","data":False}', 'check_sql': None, None: None}
+2021-11-11 23:16:37,672 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:37,673 test33 INFO handle_requests.py [第46行] 请求的method为：post
+2021-11-11 23:16:37,673 test33 INFO handle_requests.py [第47行] 请求的url为：loan/add
+2021-11-11 23:16:37,673 test33 INFO handle_requests.py [第35行] 请求数据为: {'member_id': '4', 'title': 'py33学习', 'amount': 2000000, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 0}
+2021-11-11 23:16:37,749 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:37,749 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 2, 'msg': '竞标期限为1-10天', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-11-11 23:16:37,750 test33 INFO handle_assert.py [第129行] 提取表达式为：code，期望结果为：2
+2021-11-11 23:16:37,750 test33 INFO handle_assert.py [第132行] 提取之后的结果为：[2]
+2021-11-11 23:16:37,750 test33 INFO handle_assert.py [第141行] 提取的值与期望的值比对结果为：True
+2021-11-11 23:16:37,750 test33 INFO handle_assert.py [第129行] 提取表达式为：msg，期望结果为：竞标期限为1-10天
+2021-11-11 23:16:37,750 test33 INFO handle_assert.py [第132行] 提取之后的结果为：['竞标期限为1-10天']
+2021-11-11 23:16:37,750 test33 INFO handle_assert.py [第141行] 提取的值与期望的值比对结果为：True
+2021-11-11 23:16:37,750 test33 INFO handle_assert.py [第129行] 提取表达式为：data，期望结果为：False
+2021-11-11 23:16:37,750 test33 INFO handle_assert.py [第132行] 提取之后的结果为：[None]
+2021-11-11 23:16:37,750 test33 INFO handle_assert.py [第141行] 提取的值与期望的值比对结果为：False
+2021-11-11 23:16:37,750 test33 INFO handle_assert.py [第144行] 所有实际结果与期望结果的比对情况：
+2021-11-11 23:16:37,751 test33 INFO handle_assert.py [第146行] jsonpath-code-actual-2-expected-2:True
+2021-11-11 23:16:37,751 test33 INFO handle_assert.py [第146行] jsonpath-msg-actual-竞标期限为1-10天-expected-竞标期限为1-10天:True
+2021-11-11 23:16:37,751 test33 INFO handle_assert.py [第146行] jsonpath-data-actual-False-expected-None:False

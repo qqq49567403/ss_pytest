@@ -1,0 +1,11 @@
+2021-11-11 23:16:27,983 test33 INFO test_2_login_api.py [第30行] ===== 发起一次http请求 =====
+2021-11-11 23:16:27,984 test33 INFO test_2_login_api.py [第31行] 从excel中读取的测试数据为：{'id': 3, 'title': '登陆失败-密码错误', 'method': 'post', 'url': 'member/login', 'request_data': '{"mobile_phone":"#general_user#","pwd":"12345678"}', 'expected': None, 'check_sql': None}
+2021-11-11 23:16:27,986 test33 INFO handle_replace.py [第24行] 正则提取的数据为：['general_user']
+2021-11-11 23:16:27,986 test33 INFO handle_replace.py [第35行] 从data.yaml中进行替换的数据为：general_user，替换后的数据为：15088314689
+2021-11-11 23:16:27,987 test33 INFO handle_replace.py [第40行] 替换之后的数据为：{'id': 3, 'title': '登陆失败-密码错误', 'method': 'post', 'url': 'member/login', 'request_data': '{"mobile_phone":"15088314689","pwd":"12345678"}', 'expected': None, 'check_sql': None}
+2021-11-11 23:16:27,987 test33 INFO handle_requests.py [第45行] =====  发送一次http请求  =====
+2021-11-11 23:16:27,987 test33 INFO handle_requests.py [第46行] 请求的method为：post
+2021-11-11 23:16:27,987 test33 INFO handle_requests.py [第47行] 请求的url为：member/login
+2021-11-11 23:16:27,987 test33 INFO handle_requests.py [第35行] 请求数据为: {'mobile_phone': '15088314689', 'pwd': '12345678'}
+2021-11-11 23:16:28,059 test33 INFO handle_requests.py [第57行] 响应code为：200
+2021-11-11 23:16:28,059 test33 INFO handle_requests.py [第58行] 响应的msg为：{'code': 1001, 'msg': '账号信息错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
